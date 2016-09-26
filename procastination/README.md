@@ -1,4 +1,4 @@
-## Procastination
+# Procastination
 
 There's something you're procastinating on right now. Maybe a career shift, or perhaps a side project or even learning a new language. Whatever it is, you will not achieve anything without knowing how to control your procastination.
 
