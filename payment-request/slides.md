@@ -1,13 +1,19 @@
 build-lists: true
 slidenumbers: true
 
-![](http://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2014/05/13/101666673-US_dollar_2.1910x1000.jpg)
+<!-- ![](http://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2014/05/13/101666673-US_dollar_2.1910x1000.jpg) -->
 
-# [fit] Payment Request API
+### :credit_card: :iphone: :dollar:
+# <br>
+## Payment Request API
 
 ---
 
-### My name is @grvcoelho
+![inline](https://cloud.githubusercontent.com/assets/7416751/19373165/637be3ee-9198-11e6-901d-ff6e00ada68a.png)
+
+## [fit] Guilherme Rv Coelho
+### @grvcoelho
+![inline 30%](https://cloud.githubusercontent.com/assets/7416751/19373244/f6c73676-9198-11e6-9501-ed992e8f5c0e.png)
 
 ---
 
@@ -17,12 +23,21 @@ Buying goods online is a convenient but often frustrating experience, particular
 
 ---
 
-66% of mobile
-purchases are made through **websites** rather than apps
+### :globe_with_meridians:
+# <br>
+### `>`50% of mobile purchases
+### are made through **websites** [^1]
+
+[^1]: Source: The State of Mobile Commerce 2016 - CRITEO 2016
 
 ---
 
-conversion rate on mobile websites is only 33% of that on desktop
+### :iphone:
+# <br>
+### Apps convert
+### 3x more than **websites** [^1]
+
+[^1]: Source: The State of Mobile Commerce 2016 - CRITEO 2016
 
 ---
 
@@ -30,23 +45,43 @@ conversion rate on mobile websites is only 33% of that on desktop
 
 ![inline 80% 100%](https://cloud.githubusercontent.com/assets/7416751/19321536/d14afc7e-908b-11e6-9cb1-8bf17014d0bf.png)
 
----
-
-![inline](https://cloud.githubusercontent.com/assets/7416751/19321808/e4086418-908c-11e6-856f-a6695cc50d0c.png)
-
-https://pagar.me/checkout
+### :sweat:
 
 ---
 
+![fit](https://www.smashingmagazine.com/images/checkout-pages-showcase/shopcomposition.png)
+
+---
+
+![fit](https://cloud.githubusercontent.com/assets/7416751/19372744/01556468-9195-11e6-96e2-8346b31f3fa5.gif)
+
+---
+
+![fit](https://cloud.githubusercontent.com/assets/7416751/19372741/ff31b09c-9194-11e6-81f5-70361b50a83f.png)
+
+----
+
+![fit](https://cloud.githubusercontent.com/assets/7416751/19372717/df9e537a-9194-11e6-86f5-5989a293474e.png)
+
+---
+
+### :computer:
+# <br>
 ### Introducing
 
 ## Payment Request API
 
 ---
 
+![fit](https://cloud.githubusercontent.com/assets/7416751/19323986/c345085e-9095-11e6-97e2-3773e29f2753.png)
+
+---
+
 ![inline](https://cloud.githubusercontent.com/assets/7416751/19322597/168f5e5c-9090-11e6-8945-00511433cbd7.png)
 
 https://w3c.github.io/browser-payment-api/
+
+^ It's an API that is being developed
 
 ---
 
@@ -121,6 +156,7 @@ let details = {
   }
 }
 ```
+
 ---
 
 ```javascript
@@ -208,5 +244,50 @@ if (window.PaymentRequest) {
 ```
 ---
 
+![inline](https://cloud.githubusercontent.com/assets/7416751/19373450/59506e7e-919a-11e6-97a1-417d7e3c4f03.png)
 
+https://github.com/grvcoelho/payment-request
+
+---
+
+### :closed_lock_with_key:
+# <br>
+### Works only over https
+
+---
+
+```sh
+$ npm install webpack-dev-server
+```
+
+```javascript
+// package.json
+"scripts": {
+  "start": "webpack-dev-server --https --port 3000"
+}
+```
+
+---
+
+### :iphone:
+# <br>
+### Works only on mobile
+
+---
+
+### :globe_with_meridians: :white_check_mark:
+# <br>
+### Chrome 53+
+### Browser Support
+
+---
+
+![](https://media.giphy.com/media/3o6Zt46ATnuZcypHpK/giphy.gif)
+
+---
+
+![inline](https://cloud.githubusercontent.com/assets/7416751/19373165/637be3ee-9198-11e6-901d-ff6e00ada68a.png)
+
+# Thanks
+![inline 30%](https://cloud.githubusercontent.com/assets/7416751/19373244/f6c73676-9198-11e6-9501-ed992e8f5c0e.png)
 
