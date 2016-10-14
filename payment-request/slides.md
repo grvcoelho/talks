@@ -1,4 +1,7 @@
 build-lists: true
+slidenumbers: true
+
+![](http://fm.cnbc.com/applications/cnbc.com/resources/img/editorial/2014/05/13/101666673-US_dollar_2.1910x1000.jpg)
 
 # [fit] Payment Request API
 
@@ -69,9 +72,9 @@ https://w3c.github.io/browser-payment-api/
 
 ---
 
-![filtered](https://media.giphy.com/media/wErJXg1tIgHXG/giphy.gif)
+![filtered](https://media.giphy.com/media/26gJzWq8i69cxZFD2/giphy.gif)
 
-# Show me the Code!
+# Computer Time
 
 ---
 
@@ -191,8 +194,18 @@ fetch('https://api.pagar.me/1/transactions', {
 
 ---
 
+### 5. Make it **progressive**
+
 ---
 
+```javascript
+if (window.PaymentRequest) {
+  // browsers that support payment request
+} else {
+  // browsers that don't support payment request
+  pagarme.checkout.open()
+}
+```
 ---
 
 
