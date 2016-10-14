@@ -17,9 +17,9 @@ slidenumbers: true
 
 ---
 
-# Introduction
-
-Buying goods online is a convenient but often frustrating experience, particularly on mobile devices. Although mobile traffic continues to increase, mobile conversions account for only about a third of all completed purchases. In other words, users abandon mobile purchases twice as often as desktop purchases.
+### :handbag: :iphone:
+# <br>
+### Buying online should be easy and simple
 
 ---
 
@@ -77,6 +77,10 @@ Buying goods online is a convenient but often frustrating experience, particular
 
 ---
 
+![](https://media.giphy.com/media/3o6Zt46ATnuZcypHpK/giphy.gif)
+
+---
+
 ![inline](https://cloud.githubusercontent.com/assets/7416751/19322597/168f5e5c-9090-11e6-8945-00511433cbd7.png)
 
 https://w3c.github.io/browser-payment-api/
@@ -113,9 +117,9 @@ https://w3c.github.io/browser-payment-api/
 
 ---
 
-### TODO: picture of what we're gonna do
+![fit left](https://cloud.githubusercontent.com/assets/7416751/19389049/c3f63df4-91f8-11e6-9608-25fcaf8df409.jpg)
 
-wrbsite
+https://grvcoelho.github.io/payment-request
 
 ---
 
@@ -210,6 +214,13 @@ request.show().then(result => {
 
 ---
 
+![fit](https://cloud.githubusercontent.com/assets/7416751/19389228/810be8e4-91f9-11e6-924f-67869babc510.png)
+![fit](https://cloud.githubusercontent.com/assets/7416751/19389187/4c3c6562-91f9-11e6-8c1e-104964654cdd.png)
+
+
+---
+
+
 ### 4. Display Payment Results
 
 ---
@@ -242,11 +253,6 @@ if (window.PaymentRequest) {
   pagarme.checkout.open()
 }
 ```
----
-
-![inline](https://cloud.githubusercontent.com/assets/7416751/19373450/59506e7e-919a-11e6-97a1-417d7e3c4f03.png)
-
-https://github.com/grvcoelho/payment-request
 
 ---
 
@@ -282,7 +288,9 @@ $ npm install webpack-dev-server
 
 ---
 
-![](https://media.giphy.com/media/3o6Zt46ATnuZcypHpK/giphy.gif)
+![inline](https://cloud.githubusercontent.com/assets/7416751/19373450/59506e7e-919a-11e6-97a1-417d7e3c4f03.png)
+
+https://github.com/grvcoelho/payment-request
 
 ---
 
