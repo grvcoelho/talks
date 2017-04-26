@@ -9,7 +9,15 @@ slidenumbers: true
 
 ---
 
-## What is it?
+# Who am I?
+
+### :man: Guilherme Coelho
+### :house_with_garden: Jundiaí
+### :office: Pagar.me
+
+---
+
+## What is SQS?
 
 ---
 
@@ -42,19 +50,19 @@ slidenumbers: true
 
 ## Anatomy of a Queue :skull::microscope:
 
-- QueueUrl
-- QueueAttributes
+- `QueueUrl`
 - Messages:
-  - MessageID
-  - ReceiptHandle
+  - `MessageID`
+  - `ReceiptHandle`
 
 ---
 
-## How Queues work
+## How Queues Work?
 
 ---
 
-## How Queues work
+
+## How Queues Work
 
 ![inline 100%](https://cloud.githubusercontent.com/assets/7416751/25410213/cdcb58d8-29eb-11e7-865e-00fee0b98ee0.png)
 
@@ -105,17 +113,26 @@ slidenumbers: true
 
 ---
 
-## Dead Letter Queues
+## Delay Queues :clock10:
 
 ---
 
-## Delay Queues
-
----
-
-## Delay Queues
+## Delay Queues :clock10:
 
 ![inline 100%](https://cloud.githubusercontent.com/assets/7416751/25412539/b2d0fa70-29f9-11e7-81cb-17a09dd51ae6.png)
+
+---
+
+## Dead Letter Queues :mailbox_with_mail::skull:
+
+---
+
+## Dead Letter Queues :mailbox_with_mail::skull:
+
+- Messages that can't be processed.
+- `RedrivePolicy`
+  - `deadLetterTargetArn`
+  - `maxReceiveCount`
 
 ---
 
@@ -217,3 +234,7 @@ myQueue.startProcessing(handler, options)
 [^1]: Standard Queue Pricing: _$0,40 per 1 million requests_. [[source]](https://aws.amazon.com/sqs/pricing/)
 
 ---
+
+## :football: Thanks :football:
+
+### [https://github.com/grvcoelho/talks](https://github.com/grvcoelho/talks)
