@@ -17,9 +17,7 @@ slidenumbers: true
 
 ## Pagar.me
 
----
-
-## <diagrama pagar.me -> api -> gateway>
+<diagrama api-gateway-providers>
 
 ---
 
@@ -47,6 +45,7 @@ slidenumbers: true
 - Salvar os dados em um banco de dados
 - Fila para retentativa de registro de boleto
 - Retorno via fila
+- Ambientes live/sandbox
 
 ---
 
@@ -67,13 +66,16 @@ slidenumbers: true
 
 ---
 
-## Requisitos API Node.js
+## Como deployar uma API Node.js
 
 - AutoScaling Group
 - Load Balancing
 - Monitoramento
 - Service Discovery
+- Clusters
 - ...
+
+> 5 meses atrás, eu não tinha conta na Amazon e eu não sabia o quer era uma máquina EC2.
 
 > Quem Sou eu?
 > Entrei no Pagar.me 2 anos atrás para fazer jQuery
@@ -84,6 +86,10 @@ slidenumbers: true
 
 ## Serverless
 
+- AWS Lambda: Function as a Service
+- API Gateway: endpoints da API
+- AWS SQS: serviço de filas
+
 > A gente meio que que já tinha brincado com Serverless
 > Achamos que seria mais fácil de subir esta API usando Serverless
 
@@ -91,14 +97,14 @@ slidenumbers: true
 
 ## Serverless Framework
 
-- serverless.yml
+- `serverless.yml`
 - Gera configurações com CloudFormation
 - Faz o deploy das Lambdas e API Gateway
-- É possível criar recursos com CloudFormation
+- Cria outros recursos com CloudFormation
 
 ---
 
-## serverless.yml
+## serverless.yml - http
 
 ```yaml
 create-boleto:
@@ -111,25 +117,43 @@ create-boleto:
 
 ---
 
+## serverless.yml - schedule
+
+```yaml
+process-boleto-queue:
+  handler: dist/boleto.process
+  events:
+    - schedule: rate(5 minutes)
+```
+
+---
+
 ## serverless.yml - resultado
 
 ```yaml
 service: superbowleto
 stage: live
 region: us-east-1
+
 endpoints:
   POST - https://mc4evvg26b.execute-api.us-east-1.amazonaws.com/live/boletos
 functions:
   create-boleto: live-superbowleto-create-boleto
+  process-boleto-queue: live-superbowleto-process-boleto-queue
 ```
 
 ---
 
-##  AWS SQS, Banco de Dados, IAM, etc
+## Outros recursos da aplicação
+
+- IAM: Roles, policies, permissions
+- VPC: subnets, security_groups, route_tables
+- SQS: queues
+- RDS: database
 
 ---
 
-## Criando SQS - Cloudformation
+## Serverless + CloudFormation
 
 ```yaml
 resources:
@@ -148,11 +172,13 @@ resources:
 
 ## Terraform
 
-> Terraform is a tool for building, changing, and versioning infrastructure safely and efficiently.
-
 - Infrastructure as Code
 - Execution Plans
-- HCL vs JSON
+- HCL, Variables, Interpolation, Modules, :sparkling_heart:
+- Toda infra da Pagar.me hoje é Terraform :muscle:
+
+<!-- TODO: Transformar isso em um slide para cada tópico -->
+> Falar que eu posso colocar tudo dentro de ./application e criar os ambientes live/sandbox
 
 ---
 
