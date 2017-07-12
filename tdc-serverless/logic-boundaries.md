@@ -103,3 +103,24 @@
 - Monitoring
 - Blue/Green Deployments
 - venhapara@pagar.me
+
+
+## Estrutura Problema x Solução
+
+P: Criar outros recursos
+S: Usar terraform para isso
+
+P: API Gateway público
+S: Usar API Keys
+
+P: Serverless não tem (tinha) suporte à API Keys
+S: Usar Terraform para criar API Gateway
+
+P: Senha do banco de dados
+S: Usar credstash
+
+P: Cross-referencing de coisas
+S: Criar tudo com Terraform e Serverless para deploy
+
+P: Serverless não altera funções já criadas
+S: Usar pagarme/deployer
