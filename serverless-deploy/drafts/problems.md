@@ -22,13 +22,17 @@ R: Credstash
 P: Terraform - Senha do banco de dados
 R: Script para alterar senha do banco
 
-# 6
+# 7
 P: Cross-reference
 R: Criar tudo com Terraform
 
-# 7
+# 8
 P: Serverless não atualiza funções existentes
 R: Deployar sem o Serverless
+
+# 9
+P: Response time > 10s
+R: Lambda espera o node event loop limpar
 
 ---
 
@@ -226,6 +230,31 @@ Chatbot:
 - `sharon deploy superbowleto/master to production/live`
 
 ---
+
+### Problema 9
+
+## Response time > 10s
+
+---
+
+## Response time > 10s
+
+- Requests demorando constantemente 10, 11, 12 segundos
+- Lambda esperar o Event Loop do Node se limpar
+- Nós mantemos a conexão do banco de dados aberta
+
+---
+
+### Solução 9
+
+## Alterar o comportamento da Lambda
+
+---
+
+## Alterar o comportamento da Lambda
+
+- Lambda recebe `event`, `context` e `callback`
+- `context.callbackWaitsForEmptyEventLoop`
 
 ## Futuro
 
