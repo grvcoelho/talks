@@ -2,45 +2,59 @@ theme: simple
 footer: **grvcoelho** @ pagar.me 2017
 slidenumbers: true
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 # Serverless Microservice
 
 ## Como deployar um microserviço serverless
 
 ---
 
-# Quem sou eu?
-
-### :man: Guilherme Coelho
-### :house_with_garden: Jundiaí
-### :office: Stone.co
-
-TODO: github.com/grvcoelho
+![profile](https://user-images.githubusercontent.com/7416751/28267091-c4065702-6ace-11e7-9789-5060ec60aa7a.png)
 
 ---
 
-## Pagar.me
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
-<diagrama api-gateway-providers>
+## Fluxo Transação - Pagar.me
 
----
-
-## Boleto
-
-<diagrama boleto>
+![inline xxgatewayxx](https://user-images.githubusercontent.com/7416751/28253086-7c3229a0-6a75-11e7-88b3-b514eed51813.png)
 
 ---
 
-## Boleto Registrado
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
-<diagrama boleto registrado>
+## Fluxo Transação - Boleto
+
+![inline xxboleto](https://user-images.githubusercontent.com/7416751/28253085-7c3155ca-6a75-11e7-99cc-2f29b34de167.png)
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
+## Fluxo Transação - Boleto Registrado
+
+![inline xxboleto-registrado](https://user-images.githubusercontent.com/7416751/28253084-7c2eaf8c-6a75-11e7-9d6e-5b924e630b30.png)
+
+---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 # :football:
 
 ## Superbowleto
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
+## Superbowleto
+
+![inline xxsuperbowleto](https://user-images.githubusercontent.com/7416751/28253087-7c4f36d0-6a75-11e7-95c1-2943a6b6c618.png)
+
+---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Requisitos Superbowleto
 
@@ -52,22 +66,24 @@ TODO: github.com/grvcoelho
 
 ---
 
-## <diagrama do Superbowleto>
-
----
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Tecnologia
 
-- **Node.js**
-- **Typescript** + **Webpack**
-- **Postgresql**
-- **AWS SQS**
+- Node.js
+- Typescript** + Webpack
+- Postgresql
+- AWS SQS
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Como deployar uma API Node.js
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Como deployar uma API Node.js
 
@@ -87,6 +103,8 @@ TODO: github.com/grvcoelho
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Serverless
 
 - AWS Lambda: Function as a Service
@@ -98,17 +116,23 @@ TODO: github.com/grvcoelho
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 1
 
 ## Como criar funções Lambda
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 1
 
 ## Serverless Framework
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Serverless Framework
 
@@ -118,6 +142,8 @@ TODO: github.com/grvcoelho
 - Cria outros recursos com CloudFormation
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## serverless.yml - http
 
@@ -132,6 +158,8 @@ create-boleto:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## serverless.yml - schedule
 
 ```yaml
@@ -142,6 +170,8 @@ process-boleto-queue:
 ```
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## serverless.yml - resultado
 
@@ -159,20 +189,26 @@ functions:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 2
 
 ## Criar outros recursos da aplicação
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Criar outros recursos da aplicação
 
 - IAM: Roles, policies, permissions
-- VPC: subnets, security_groups, route_tables
+- VPC: subnets, security\_groups, route\_tables
 - SQS: queues
 - RDS: database
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Serverless + CloudFormation
 
@@ -187,11 +223,15 @@ resources:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 2
 
 ## Terraform - Infrastructure as Code
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Terraform
 
@@ -203,6 +243,8 @@ resources:
 ^ Falar que eu posso colocar tudo dentro de ./application e criar os ambientes live/sandbox
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Terraform - Exemplo
 
@@ -223,6 +265,8 @@ output "queue_arn" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Terraform - Módulos
 
 ```tcl
@@ -241,11 +285,15 @@ module "live" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 3
 
 ## API Gateway - Endpoints públicos
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## API Gateway - Endpoints públicos
 
@@ -256,11 +304,15 @@ c) usar API Keys do API Gateway
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 4
 
 ## Serverless não suportava API Keys
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Serverless não suportava API Keys
 
@@ -269,11 +321,15 @@ c) usar API Keys do API Gateway
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 4
 
 ## Usar Terraform para criar endpoints
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Usar Terraform para criar endpoints
 
@@ -287,9 +343,11 @@ c) usar API Keys do API Gateway
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Usar Terraform para criar endpoints
 
-```
+```ruby
 module "create_endpoint" {
   source = "./api-endpoint"
   method = "POST"
@@ -300,11 +358,15 @@ module "create_endpoint" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 5
 
 ## Senha do banco de dados
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Senha do banco de dados
 
@@ -314,23 +376,52 @@ module "create_endpoint" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 5
 
 ## Salvar senha no Credstash
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Salvar senha no Credstash
 
-TODO: diagrama: pega senha no banco de dados -> conecta -> executa função
+Deploy:
+
+```
+$ credstash put sandbox/database/password pass123
+```
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
+## Salvar senha no Credstash
+
+Aplicação:
+
+```javascript
+function init () {
+  return Promise.resolve()
+    .then(() => credstash.get('sandbox/database/password'))
+    .then(initDatabase)
+    .then(runFunction)
+}
+```
+
+---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ### Problema 6
 
 ## Senha do banco de dados no `.tfstate`
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Senha do banco de dados no `.tfstate`
 
@@ -340,11 +431,13 @@ TODO: diagrama: pega senha no banco de dados -> conecta -> executa função
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 6
 
 ## Script para atualizar banco de dados
 
-```
+```ruby
 resource "aws_db_instance" "database" {
   name = "superbowleto"
   password = "123456"
@@ -358,11 +451,15 @@ resource "aws_db_instance" "database" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 7
 
 ## Cross-referencing entre ferramentas
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Cross-referencing entre ferramentas
 
@@ -372,11 +469,15 @@ resource "aws_db_instance" "database" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 7
 
 ## Terraform everything!
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Terraform everything!
 
@@ -385,17 +486,23 @@ resource "aws_db_instance" "database" {
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Problema 8
 
 ## Serverless não atualiza Lambdas já criadas
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 8
 
 ## Criar um deployer
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ### Como deployar uma função Lambda
 
@@ -405,13 +512,15 @@ resource "aws_db_instance" "database" {
 
 ---
 
-## Deployer
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
-pagarme/deployer
+![inline](https://user-images.githubusercontent.com/7416751/28267282-c397d77c-6acf-11e7-9d1e-b2629103b338.png)
 
-^ TODO: colocar github do deployer aqui
+## [github.com/pagarme/deployer](pagarme/deployer)
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Deployer - Steps
 
@@ -420,6 +529,8 @@ pagarme/deployer
 - **Deploy**: `nomad`, **`lambda`**
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Deployer - Lambda
 
@@ -448,6 +559,8 @@ environment:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Deployer - Na prática
 
 Run:
@@ -458,11 +571,15 @@ Chatbot:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 9
 
 ## Response time > 10s
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Response time > 10s
 
@@ -472,11 +589,15 @@ Chatbot:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Solução 9
 
 ## Alterar o comportamento da Lambda
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ## Alterar o comportamento da Lambda
 
@@ -485,11 +606,15 @@ Chatbot:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ### Problema 10
 
 ## Migração de banco de dados
 
 ---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
 
 ### Solução 10
 
@@ -497,8 +622,22 @@ Chatbot:
 
 ---
 
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
 ## Futuro
 
 - Monitoring
 - Blue/Green Deployments
 - code@pagar.me
+
+---
+
+## Superbowleto Opensource
+
+---
+
+![background](https://user-images.githubusercontent.com/7416751/28267089-c3fe87fc-6ace-11e7-9ad7-70f25b05d5a6.png)
+
+![inline](https://user-images.githubusercontent.com/7416751/28267341-18c57402-6ad0-11e7-81b4-0f802d999efb.png)
+
+## [github.com/pagarme/superbowleto](https://github.com/pagarme/superbowleto)
