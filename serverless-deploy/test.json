@@ -1,0 +1,14 @@
+{
+    "amount": 2000,
+    "title_id": "10",
+    "company_document_number": "98154524872",
+    "company_name": "Some Company",
+    "expiration_date": "2017-07-19T18:13:42.358Z",
+    "instructions": "Please do not accept after expiration_date",
+    "issuer": "bradesco",
+    "payer_document_number": "98154524872",
+    "payer_document_type": "cpf",
+    "payer_name": "David Bowie",
+    "queue_url": "xxx",
+    "register": true
+}

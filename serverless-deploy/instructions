@@ -1,0 +1,6 @@
+sudo ./vpnman.sh revoke hugoposca
+sudo ./vpnman.sh update-crl
+sudo rm /var/certroot/vpn/reqs/hugoposca.req
+sudo rm /var/certroot/vpn/private/hugoposca.key
+sudo rm /var/certroot/vpn/issued/hugoposca.crt
+vim /var/certroot/vpn/index.txt
