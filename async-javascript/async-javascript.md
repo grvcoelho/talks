@@ -1,3 +1,88 @@
+const getTotal = (orderId, callback) => {
+  getProducts(orderId, (err, products) => {
+    getStock(products, (err, hasStock) => {
+      if (hasStock) {
+        calculateTotal(products, (err, total) => {
+          callback(null, total)
+        })
+      } else {
+        callback(err, null)
+      }
+    })
+  })
+}
+
+const finishOrder = (callback) => {
+  getTotal(123, (err, total) => {
+    getShipping(total, (err, shipping) => {
+      confirmPurchase((err, message) => {
+        console.log(message)
+        callback(message)
+      })
+    })
+  })
+}
+
+const finishOrder = (orderId, callback) => {
+  getProducts(orderId, (err, products) => {
+    getStock(products, (err, hasStock) => {
+      calculateTotal(products, (err, total) => {
+        getShipping((err, shipping) => {
+          confirmPurchase(orderId, shipping, (err, success) => {
+            callback(null, success)
+          })
+        })
+      })
+    })
+  })
+}
+
+const finishOrder = (orderId, callback) => {
+  getProducts(orderId, (err, products) => {
+    getStock(products, (err, hasStock) => {
+      calculateTotal(products, (err, total) => {
+        getShipping((err, shipping) => {
+          confirmPurchase(orderId, shipping, (err, message) => {
+            callback(null, message)
+          })
+        })
+      })
+    })
+  })
+}
+
+
+
+
+
+
+
+listen( "click", function handler(evt){
+	setTimeout( function request(){
+		ajax( "http://some.url.1", function response(text){
+			if (text == "hello") {
+				handler();
+			}
+			else if (text == "world") {
+				request();
+			}
+		} );
+	}, 500) ;
+} );
+
+listen('click', function handler (event) {
+  setTimeout(function request () {
+    fetch('/api/message', function (response) {
+      if (text === 'hello') {
+        return handler()
+      }
+
+      return request()
+    })
+  }, 500)
+})
+
+
 const getUserFriends = (userId, callback) => {
   fetch(`/users/${userId}`, (err, user) => {
     const friends = []
@@ -52,6 +137,16 @@ listen("click", function handler(evt){
 	}, 500) ;
 } );
 
+analytics.trackPurchase(purchaseData, () => {
+  chargeCreditCard()
+  displayThankyouPage()
+})
+
+analytics.trackPurchase( purchaseData, function(){
+  chargeCreditCard();
+  displayThankyouPage();
+});
+
 # Promises
 
 * The Hamburger analogy
@@ -103,3 +198,49 @@ Inside a function marked as `async`, you are allowed to place the `await` keywor
 Async/Await + Promises = <3
 
 # Bonus: Reactive Extensions
+
+buyHamburger()
+  .then(hamburger => {
+    return eatHamburger()
+  })
+  .catch(err => {
+    console.log(err)
+    return cryALot()
+  })
+
+
+
+
+const finishOrder = (orderId, callback) => {
+  getProducts(orderId, (err, products) => {
+    getStock(products, (err, hasStock) => {
+      calculateTotal(products, (err, total) => {
+        getShipping((err, shipping) => {
+          confirmPurchase(orderId, shipping, (err, message) => {
+            callback(null, message)
+          })
+        })
+      })
+    })
+  })
+}
+
+const finishOrder = (orderId) => {
+  return getProducts(orderId)
+    .then(products => {
+      return getStock(products)
+    })
+}
+
+const finishOrder = (orderId) => {
+  return getProducts(orderId)
+    .then(getStock)
+    .then(calculateTotal)
+    .then(getShipping)
+    .then(confirmPurchase)
+}
+
+finishOrder(123)
+  .then(message => {
+    displayThankyouPage()
+  })
