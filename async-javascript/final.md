@@ -406,3 +406,83 @@ it('should test request', coroutine(function* () {
   const response = yield request('/orders')
   assert(response.status).is(200)
 }))
+
+---
+
+# Async / Await
+
+* Works just like Generators + Coroutines
+* Also pauses function execution
+* Is built on top of `Promises`
+* Write `async` code that flows like `sync` code
+* Returns a `Promise`
+* It doesn't trasnpile well with **Babel**
+
+---
+
+const handleOrder = coroutine(function* (orderId) {
+  const order = yield findOrder(orderId)
+  const items = yield findItems(order)
+  const customer = yield findCustomer(order)
+
+  return chargeOrder(order, items, customer)
+})
+
+---
+
+const handleOrder = async function (orderId) {
+  const order = await findOrder(orderId)
+  const items = await findItems(order)
+  const customer = await findCustomer(order)
+
+  return chargeOrder(order, items, customer)
+}
+
+---
+
+const fn = async function () {
+  const values = [2, 5]
+
+  const result = values.map(async function (x) {
+    return await double(x)
+  })
+
+  return result
+}
+
+# Bonus: Reactive Programming
+
+* Aynchronous streams of events and data
+* Intervals, webSockets, DOM events, general events
+* Single vs Multiple values
+* Cancellable vs Uncancellable
+* Eager vs Lazy
+
+---
+
+const numberPromise = new Promise((resolve) => {
+    resolve(5)
+    resolve(10)
+})
+
+numberPromise.then(value => console.log(value))
+
+---
+
+const numberObservable = new Observable((observer) => {
+  observer.next(5)
+  observer.next(10)
+})
+
+numberObservable.subscribe(value => console.log(value))
+
+---
+
+const Rx = require('rx')
+
+Rx.Observable()
+  .interval(1000)
+  .map(x => x + 1)
+  .takeWhile(x => x <= 3)
+  .concat(Rx.Observable.of('World'))
+  .subscribe(x => console.log(`Hello ${x}!`))
