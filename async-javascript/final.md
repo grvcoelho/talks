@@ -7,6 +7,30 @@
 
 ---
 
+go
+func main() {
+	fmt.Println("BEGIN")
+
+	contents, _ := ioutil.ReadFile("/tmp/dat")
+	fmt.Print(string(contents))
+
+	fmt.Println("FINISH")
+}
+
+---
+
+const fs = require('fs')
+
+console.log('BEGIN')
+
+fs.readFile('/tmp/dat', (err, contents) => {
+  console.log(String(contents))
+})
+
+console.log('FINISH')
+
+---
+
 # Async
 
 * Part of your program runs `now`
@@ -24,32 +48,6 @@
 
 ---
 
-go
-func main() {
-	fmt.Println("BEGIN")
-
-	contents, _ := ioutil.ReadFile("/tmp/dat")
-	fmt.Print(string(contents))
-
-	fmt.Println("FINISH")
-}
-
-
----
-
-
-const fs = require('fs')
-
-console.log('BEGIN')
-
-fs.readFile('/tmp/dat', (err, contents) => {
-  console.log(String(contents))
-})
-
-console.log('FINISH')
-
-
----
 
 # Callbacks
 
@@ -89,7 +87,6 @@ readFile('/tmp/dat', (err, contents) => {
 
 ---
 
-
 const divide = (a, b, callback) => {
   if (b === 0) {
     return callback('Cannot be zero', null)
@@ -103,7 +100,6 @@ const divide = (a, b, callback) => {
 divide(10, 2, (err, result) => {
   // ...
 })
-
 
 ---
 
@@ -125,7 +121,6 @@ const finishOrder = (orderId, callback) => {
 finishOrder(123, (err, message) => {
   // ...
 })
-
 
 ---
 
@@ -156,6 +151,41 @@ analytics.trackPurchase(purchaseData, () => {
 
 ---
 
+runA(function () {
+  runB()
+
+  runC(function () {
+    runD()
+  })
+
+  runE()
+})
+
+runF()
+
+---
+
+async.waterfall([
+  function(callback) {
+    callback(null, 'one', 'two')
+  },
+  function(arg1, arg2, callback) {
+    // arg1 now equals 'one' and arg2 now equals 'two'
+    callback(null, 'three')
+  },
+  function(arg1, callback) {
+    // arg1 now equals 'three'
+    callback(null, 'done')
+  },
+], function (err, result) {
+  // result now equals 'done'
+})
+
+
+http.get('/users')
+  .success(users => {})
+  .fail(err => {})
+
 # Promises
 
 * A representation of a future value
@@ -176,7 +206,6 @@ buyHamburger()
 
 
 ---
-
 
 const finishOrder = (orderId) => {
   return getProducts(orderId)
@@ -218,6 +247,10 @@ calculateTotal(xbox, 2)
     return displayErrorPage(err)
   })
 
+calculateTotal(xbox, 2)
+  .then(chargeCreditCard)
+  .then(displ)
+
 
 ---
 
@@ -245,6 +278,66 @@ calculateTotal(xbox, 2)
 * `Promise.resolve`
 
 ---
+
+Promise.resolve(5)
+  .then(x => {
+    return x * 2
+  })
+  .then(result => {
+    return anotherPromise()
+  })
+
+
+Promise.resolve(5)
+  .then(x => {
+    if (x === 5) {
+      return Promise.reject(new Error('Value not allowed'))
+    }
+
+    if (Number.isNaN(Number(x))) {
+      throw new TypeError('Must be a number')
+    }
+
+    return x
+  })
+  .then(success)
+  .catch(err => {
+    console.log(err.message)
+  })
+
+
+console.log('Hello')
+
+Promise.all([
+  findOrder(123),
+  findCustomer('John Doe')
+])
+  .then([order, customer] => {
+    return chargeCreditCard(order, customer)
+  })
+
+Promise.race([
+  findAddressOnCorreios(01329010),
+  findAddressOnDatabase(01329010)
+])
+  .then(address => {
+    // ...
+  })
+
+const timeout = (ms) => new Promise((resolve, reject) => {
+  setTimeout(
+    () => reject(new TimeoutError())
+    ms
+  )
+})
+
+Promise.race([
+  timeout(3000),
+  chargeCreditCard()
+])
+  .then(displaySuccess)
+  .catch(handleTimeout)
+
 
 # Promise Problems
 
